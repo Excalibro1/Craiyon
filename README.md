@@ -163,7 +163,7 @@ This is an example of how to list things you need to use the software and how to
 Recommended method of deploying this bot is deployment on [Heroku](https://www.heroku.com/). To deploy to Heroku please click on button bellow.
 
 <p align="center">
-<a href="https://heroku.com/deploy?template=https://github.com/karafra/ai-art.git">
+<a href="https://heroku.com/deploy?template=https://github.com/Excalibro1/craiyon.git">
   <img src="https://img.shields.io/badge/%E2%86%91_Deploy_to-Heroku-7056bf.svg?style=for-the-badge" alt="Deploy">
 </a>
 </p>
