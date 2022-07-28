@@ -16,7 +16,7 @@ export class Collage {
     height: 3,
     imageWidth: 300,
     imageHeight: 300,
-    spacing: 20,
+    spacing: 5,
     sources: [],
   };
   public canvas: any;
@@ -44,3 +44,4 @@ export class Collage {
     return new MessageAttachment(buffer, `${name}.png`);
   }
 }
+
