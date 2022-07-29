@@ -16,7 +16,7 @@ export class Collage {
     height: 3,
     imageWidth: 512,
     imageHeight: 512,
-    spacing: 10,
+    spacing: 20,
     sources: [],
   };
   public canvas: any;
