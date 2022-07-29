@@ -3,7 +3,7 @@ import { CogView2Command } from './cog-view-2/cog-view-2.command';
 import { DalleMiniCommand } from './dalle-mini/dalle-mini.command';
 
 @Command({
-  name: 'Craiyon',
+  name: 'craiyon',
   description: 'generate images based on prompt',
   include: [DalleMiniCommand, CogView2Command],
 })
