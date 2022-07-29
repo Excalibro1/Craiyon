@@ -14,9 +14,9 @@ export class Collage {
   private static readonly options: any = {
     width: 3,
     height: 3,
-    imageWidth: 300,
-    imageHeight: 300,
-    spacing: 5,
+    imageWidth: 512,
+    imageHeight: 512,
+    spacing: 10,
     sources: [],
   };
   public canvas: any;
