@@ -12,9 +12,12 @@ import { IncludeInHelp } from '../../../decorators/includeInHelp.decorator';
 import { JobResolver } from '../../../entity/job/job.resolver';
 import { CogView2Service } from '../../../services/commands/art/cog-view-2/cog-view-2.service';
 import { CogView2CommandDto } from './cog-view-2.dto';
+
 /**
- * Command generating art form prompt based on cog view 2 model
+ * Command generating art form prompt based on cog view 2 model.
  *
+ * @classdesc Top level command handling generation of images based on THUDM CogView2 model.
+ * @example /ai-art cog-view2
  * @author Karafra
  * @since 1.4.5
  */
@@ -46,11 +49,13 @@ export class CogView2Command
 {
   private readonly logger = new Logger(CogView2Command.name);
 
-  /**
-   * Public constructor for cog-view-2 command.
+  /** Service service handling web requests to api.
    *
-   * @param cogView2Service service handling web requests to api
    * @param sentryService service handling error reporting
+   * @param jobResolver database resolver for jobs entity
+   * @param cogView2Service service handling image generation for cogView2 mode
+   *
+   * @see JobResolver
    */
   public constructor(
     private readonly jobResolver: JobResolver,
@@ -92,7 +97,7 @@ export class CogView2Command
       });
       dbRecord.messageId = message.id;
       dbRecord.messageLink = message.url;
-      await this.jobResolver.update(dbRecord);
+      await this.jobResolver.create(dbRecord);
       this.logger.debug('Cog-view-2 command execution finished successfully');
     } catch (err) {
       this.logger.error(
